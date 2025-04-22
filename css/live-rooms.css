@@ -1,0 +1,816 @@
+/* Live Rooms Page Styles */
+
+/* Live Rooms Tabs */
+.live-rooms-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    position: sticky;
+    top: 60px;
+    z-index: 10;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.live-rooms-tabs::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.tab-btn {
+    padding: 15px 20px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px 3px 0 0;
+}
+
+/* Search and Filter */
+.search-filter-container {
+    display: flex;
+    padding: 15px 20px;
+    gap: 10px;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+.search-bar i {
+    color: var(--text-secondary);
+    margin-right: 10px;
+}
+
+.search-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 10px 0;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+/* Create Room Button */
+.create-room-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.create-room-btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Live Rooms Container */
+.live-rooms-container {
+    padding: 20px;
+}
+
+/* Featured Room */
+.featured-room {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.featured-room:hover {
+    transform: translateY(-2px);
+}
+
+.room-banner {
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    padding: 30px;
+    position: relative;
+    color: white;
+}
+
+.live-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #ef4444;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.room-info h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+}
+
+.room-info p {
+    margin: 0 0 15px 0;
+    opacity: 0.9;
+    font-size: 1rem;
+    max-width: 80%;
+}
+
+.room-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.room-listeners, .room-duration {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.room-hosts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.host-avatars {
+    display: flex;
+    gap: 15px;
+}
+
+.host-avatar {
+    position: relative;
+}
+
+.avatar-medium {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.host-badge {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.room-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.join-room-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.join-room-btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.join-room-btn.small {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
+.remind-btn, .share-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.remind-btn:hover, .share-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.share-btn {
+    padding: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 30px 0 15px;
+    color: var(--text-primary);
+}
+
+/* Rooms Grid */
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.room-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card:hover {
+    transform: translateY(-2px);
+}
+
+.room-card-header {
+    padding: 15px;
+    position: relative;
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.room-category {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.room-card-content {
+    padding: 15px;
+    flex: 1;
+}
+
+.room-card-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+}
+
+.room-card-content p {
+    margin: 0 0 15px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.room-participants {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.participant-avatars {
+    display: flex;
+    position: relative;
+}
+
+.participant-avatars .avatar-small {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--bg-secondary);
+    margin-right: -10px;
+}
+
+.avatar-count {
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--bg-secondary);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+.participant-count {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.room-card-footer {
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Upcoming Rooms */
+.upcoming-rooms {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upcoming-room-card {
+    display: flex;
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.upcoming-room-card:hover {
+    transform: translateY(-2px);
+}
+
+.upcoming-room-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    min-width: 70px;
+}
+
+.upcoming-room-date .day {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.upcoming-room-date .month {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.upcoming-room-info {
+    flex: 1;
+    padding: 15px;
+}
+
+.upcoming-room-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.upcoming-room-info p {
+    margin: 0 0 10px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.upcoming-room-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.upcoming-room-details span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.upcoming-room-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+}
+
+.interested-count {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Sidebar Sections */
+.your-rooms {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.your-room-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--bg-hover);
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.your-room-item:hover {
+    background-color: var(--bg-active);
+}
+
+.your-room-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+}
+
+.your-room-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.edit-room-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.edit-room-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.view-all-btn {
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.view-all-btn:hover {
+    color: var(--primary-color-dark);
+    text-decoration: underline;
+}
+
+.people-to-follow {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.person-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.person-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.person-info h3 {
+    margin: 0 0 2px 0;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.person-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.follow-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.follow-btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.follow-btn.following {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.popular-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.topic-tag {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.topic-tag:hover {
+    background-color: var(--bg-active);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.close-modal:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.schedule-options {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.date-time-picker {
+    display: flex;
+    gap: 15px;
+}
+
+.date-picker, .time-picker {
+    flex: 1;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.cancel-btn {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cancel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.create-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.create-btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .room-info p {
+        max-width: 100%;
+    }
+    
+    .room-hosts {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .room-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .rooms-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .upcoming-room-card {
+        flex-direction: column;
+    }
+    
+    .upcoming-room-date {
+        flex-direction: row;
+        gap: 5px;
+        padding: 10px;
+        justify-content: flex-start;
+    }
+    
+    .upcoming-room-actions {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .date-time-picker {
+        flex-direction: column;
+    }
+}

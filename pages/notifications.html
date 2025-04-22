@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - BuilderSpace</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/notifications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="logo">
+                    <img src="../images/BS.png" alt="BuilderSpace Logo" width="32" height="32">
+                    <h1>BuilderSpace</h1>
+                </a>
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="discover.html">
+                            <i class="fas fa-compass"></i>
+                            <span>Discover</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="notifications.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="live-rooms.html">
+                            <i class="fas fa-microphone"></i>
+                            <span>Live Rooms</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookmarks.html">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Bookmarks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="create-post-btn">
+                    <i class="fas fa-pen"></i>
+                    <span>Create Post</span>
+                </a>
+                <div class="user-profile">
+                    <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar">
+                    <div class="user-info">
+                        <h3>John Doe</h3>
+                        <p>@johndoe</p>
+                    </div>
+                    <div class="dropdown-menu">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <h1>Notifications</h1>
+                <div class="header-actions">
+                    <button class="mark-read-btn" title="Mark all as read">
+                        <i class="fas fa-check-double"></i>
+                    </button>
+                    <button class="filter-btn" title="Filter notifications">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Notification Tabs -->
+            <div class="notification-tabs">
+                <button class="tab-btn active" data-tab="all">All</button>
+                <button class="tab-btn" data-tab="mentions">Mentions</button>
+                <button class="tab-btn" data-tab="likes">Likes</button>
+                <button class="tab-btn" data-tab="comments">Comments</button>
+                <button class="tab-btn" data-tab="follows">Follows</button>
+            </div>
+
+            <!-- Notifications List -->
+            <div class="notifications-list">
+                <!-- Today Section -->
+                <div class="notification-section">
+                    <h2 class="section-title">Today</h2>
+                    
+                    <!-- New notification (unread) -->
+                    <div class="notification-item unread">
+                        <div class="notification-avatar">
+                            <img src="../images/avatar-placeholder-2.jpg" alt="Jane Smith" class="avatar-small">
+                        </div>
+                        <div class="notification-content">
+                            <p><strong>Jane Smith</strong> liked your post about React state management.</p>
+                            <span class="notification-time">2 hours ago</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="notification-action" title="Mark as read">
+                                <i class="fas fa-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- New notification (unread) -->
+                    <div class="notification-item unread">
+                        <div class="notification-avatar">
+                            <img src="../images/avatar-placeholder-3.jpg" alt="Alex Johnson" class="avatar-small">
+                        </div>
+                        <div class="notification-content">
+                            <p><strong>Alex Johnson</strong> commented on your post: "This is exactly what I was looking for! Thanks for sharing."</p>
+                            <span class="notification-time">5 hours ago</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="notification-action" title="Mark as read">
+                                <i class="fas fa-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- New notification (unread) -->
+                    <div class="notification-item unread">
+                        <div class="notification-avatar">
+                            <img src="../images/avatar-placeholder-4.jpg" alt="Sarah Williams" class="avatar-small">
+                        </div>
+                        <div class="notification-content">
+                            <p><strong>Sarah Williams</strong> started following you.</p>
+                            <span class="notification-time">8 hours ago</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="notification-action" title="Mark as read">
+                                <i class="fas fa-circle"></i>
+                            </button>
+                            <button class="follow-btn">Follow</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Yesterday Section -->
+                <div class="notification-section">
+                    <h2 class="section-title">Yesterday</h2>
+                    
+                    <!-- Read notification -->
+                    <div class="notification-item">
+                        <div class="notification-avatar">
+                            <img src="../images/avatar-placeholder-5.jpg" alt="Michael Brown" class="avatar-small">
+                        </div>
+                        <div class="notification-content">
+                            <p><strong>Michael Brown</strong> mentioned you in a comment: "I think @johndoe would have some great insights on this."</p>
+                            <span class="notification-time">Yesterday, 14:25</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="notification-action" title="Mark as unread">
+                                <i class="far fa-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Read notification -->
+                    <div class="notification-item">
+                        <div class="notification-avatar multiple-avatars">
+                            <img src="../images/avatar-placeholder-6.jpg" alt="Emily Davis" class="avatar-small stacked">
+                            <img src="../images/avatar-placeholder-7.jpg" alt="David Wilson" class="avatar-small stacked">
+                            <span class="avatar-count">+3</span>
+                        </div>
+                        <div class="notification-content">
+                            <p><strong>Emily Davis</strong>, <strong>David Wilson</strong>, and <strong>3 others</strong> liked your post about cloud computing.</p>
+                            <span class="notification-time">Yesterday, 10:15</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="notification-action" title="Mark as unread">
+                                <i class="far fa-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- This Week Section -->
+                <div class="notification-section">
+                    <h2 class="section-title">This Week</h2>
+                    
+                    <!-- Read notification -->
+                    <div class="notification-item">
+                        <div class="notification-avatar">
+                            <img src="../images/avatar-placeholder-8.jpg" alt="Olivia Taylor" class="avatar-small">
+                        </div>
+                        <div class="notification-content">
+                            <p><strong>Olivia Taylor</strong> shared your post about UI design principles.</p>
+                            <span class="notification-time">Monday, 09:45</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="notification-action" title="Mark as unread">
+                                <i class="far fa-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Read notification -->
+                    <div class="notification-item">
+                        <div class="notification-avatar">
+                            <i class="fas fa-star notification-icon"></i>
+                        </div>
+                        <div class="notification-content">
+                            <p>Your post about React hooks reached <strong>100 likes</strong>! It's getting popular!</p>
+                            <span class="notification-time">Sunday, 20:30</span>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="notification-action" title="Mark as unread">
+                                <i class="far fa-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Activity Summary -->
+            <div class="sidebar-section">
+                <h2>Activity Summary</h2>
+                <div class="activity-summary">
+                    <div class="activity-stat">
+                        <div class="stat-icon likes">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-count">128</span>
+                            <span class="stat-label">Likes</span>
+                        </div>
+                    </div>
+                    <div class="activity-stat">
+                        <div class="stat-icon comments">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-count">32</span>
+                            <span class="stat-label">Comments</span>
+                        </div>
+                    </div>
+                    <div class="activity-stat">
+                        <div class="stat-icon mentions">
+                            <i class="fas fa-at"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-count">15</span>
+                            <span class="stat-label">Mentions</span>
+                        </div>
+                    </div>
+                    <div class="activity-stat">
+                        <div class="stat-icon followers">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-count">8</span>
+                            <span class="stat-label">New Followers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="sidebar-section">
+                <h2>Recent Activity</h2>
+                <div class="recent-activity">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p>Your repository <strong>ReactState</strong> was forked 5 times this week.</p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p>Your post about cloud computing is trending in <strong>#CloudComputing</strong>.</p>
+                            <span class="activity-time">3 days ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p>You've reached <strong>500 followers</strong>! Keep up the great work!</p>
+                            <span class="activity-time">1 week ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Ads Info</a>
+                <a href="#">More</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 BuilderSpace, Inc.
+            </div>
+        </aside>
+    </div>
+
+    <!-- User Menu -->
+    <div class="user-menu">
+        <a href="profile.html" class="user-menu-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="bookmarks.html" class="user-menu-item">
+            <i class="fas fa-bookmark"></i>
+            <span>Bookmarks</span>
+        </a>
+        <a href="settings.html" class="user-menu-item">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </a>
+        <div class="user-menu-divider"></div>
+        <a href="#" class="user-menu-item logout-btn danger" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/notifications.js"></script>
+</body>
+</html>

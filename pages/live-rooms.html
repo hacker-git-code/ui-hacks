@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Rooms - BuilderSpace</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/live-rooms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="logo">
+                    <img src="../images/BS.png" alt="BuilderSpace Logo" width="32" height="32">
+                    <h1>BuilderSpace</h1>
+                </a>
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="discover.html">
+                            <i class="fas fa-compass"></i>
+                            <span>Discover</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="live-rooms.html">
+                            <i class="fas fa-microphone"></i>
+                            <span>Live Rooms</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookmarks.html">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Bookmarks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="create-post-btn">
+                    <i class="fas fa-pen"></i>
+                    <span>Create Post</span>
+                </a>
+                <div class="user-profile">
+                    <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar">
+                    <div class="user-info">
+                        <h3>John Doe</h3>
+                        <p>@johndoe</p>
+                    </div>
+                    <div class="dropdown-menu">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <h1>Live Rooms</h1>
+                <div class="header-actions">
+                    <button class="create-room-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>Create Room</span>
+                    </button>
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Live Rooms Tabs -->
+            <div class="live-rooms-tabs">
+                <button class="tab-btn active" data-tab="all">All Rooms</button>
+                <button class="tab-btn" data-tab="following">Following</button>
+                <button class="tab-btn" data-tab="popular">Popular</button>
+                <button class="tab-btn" data-tab="tech">Tech</button>
+                <button class="tab-btn" data-tab="design">Design</button>
+                <button class="tab-btn" data-tab="career">Career</button>
+            </div>
+
+            <!-- Live Rooms Search -->
+            <div class="search-filter-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search rooms...">
+                </div>
+                <button class="filter-btn" title="Filter rooms">
+                    <i class="fas fa-filter"></i>
+                </button>
+            </div>
+
+            <!-- Live Rooms List -->
+            <div class="live-rooms-container">
+                <!-- Featured Room -->
+                <div class="featured-room">
+                    <div class="room-banner">
+                        <span class="live-badge">LIVE</span>
+                        <span class="featured-badge">FEATURED</span>
+                        <div class="room-info">
+                            <h2>The Future of Web Development</h2>
+                            <p>Join industry experts as they discuss upcoming trends and technologies in web development</p>
+                            <div class="room-stats">
+                                <span class="room-listeners"><i class="fas fa-headphones"></i> 1,245 listening</span>
+                                <span class="room-duration"><i class="fas fa-clock"></i> 1h 15m</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-hosts">
+                        <div class="host-avatars">
+                            <div class="host-avatar">
+                                <img src="../images/avatar-placeholder-2.jpg" alt="Host" class="avatar-medium">
+                                <span class="host-badge">HOST</span>
+                            </div>
+                            <div class="host-avatar">
+                                <img src="../images/avatar-placeholder-3.jpg" alt="Co-host" class="avatar-medium">
+                                <span class="host-badge">CO-HOST</span>
+                            </div>
+                        </div>
+                        <div class="room-actions">
+                            <button class="join-room-btn">
+                                <i class="fas fa-headphones"></i>
+                                Join Room
+                            </button>
+                            <button class="remind-btn">
+                                <i class="far fa-bell"></i>
+                                Remind Me
+                            </button>
+                            <button class="share-btn">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Rooms Grid -->
+                <h2 class="section-title">Active Rooms</h2>
+                <div class="rooms-grid">
+                    <!-- Room Card 1 -->
+                    <div class="room-card">
+                        <div class="room-card-header">
+                            <span class="live-badge">LIVE</span>
+                            <span class="room-category">React</span>
+                        </div>
+                        <div class="room-card-content">
+                            <h3>React Hooks Deep Dive</h3>
+                            <p>Advanced patterns and best practices for React hooks</p>
+                            <div class="room-participants">
+                                <div class="participant-avatars">
+                                    <img src="../images/avatar-placeholder-4.jpg" alt="Participant" class="avatar-small">
+                                    <img src="../images/avatar-placeholder-5.jpg" alt="Participant" class="avatar-small">
+                                    <span class="avatar-count">+3</span>
+                                </div>
+                                <span class="participant-count">125 listening</span>
+                            </div>
+                        </div>
+                        <div class="room-card-footer">
+                            <button class="join-room-btn small">
+                                <i class="fas fa-headphones"></i>
+                                Join
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Room Card 2 -->
+                    <div class="room-card">
+                        <div class="room-card-header">
+                            <span class="live-badge">LIVE</span>
+                            <span class="room-category">UX Design</span>
+                        </div>
+                        <div class="room-card-content">
+                            <h3>Designing for Accessibility</h3>
+                            <p>Creating inclusive digital experiences for all users</p>
+                            <div class="room-participants">
+                                <div class="participant-avatars">
+                                    <img src="../images/avatar-placeholder-6.jpg" alt="Participant" class="avatar-small">
+                                    <img src="../images/avatar-placeholder-7.jpg" alt="Participant" class="avatar-small">
+                                    <span class="avatar-count">+5</span>
+                                </div>
+                                <span class="participant-count">208 listening</span>
+                            </div>
+                        </div>
+                        <div class="room-card-footer">
+                            <button class="join-room-btn small">
+                                <i class="fas fa-headphones"></i>
+                                Join
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Room Card 3 -->
+                    <div class="room-card">
+                        <div class="room-card-header">
+                            <span class="live-badge">LIVE</span>
+                            <span class="room-category">Career</span>
+                        </div>
+                        <div class="room-card-content">
+                            <h3>Navigating Tech Interviews</h3>
+                            <p>Tips and strategies for acing your next tech interview</p>
+                            <div class="room-participants">
+                                <div class="participant-avatars">
+                                    <img src="../images/avatar-placeholder-8.jpg" alt="Participant" class="avatar-small">
+                                    <img src="../images/avatar-placeholder-2.jpg" alt="Participant" class="avatar-small">
+                                    <span class="avatar-count">+2</span>
+                                </div>
+                                <span class="participant-count">176 listening</span>
+                            </div>
+                        </div>
+                        <div class="room-card-footer">
+                            <button class="join-room-btn small">
+                                <i class="fas fa-headphones"></i>
+                                Join
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Room Card 4 -->
+                    <div class="room-card">
+                        <div class="room-card-header">
+                            <span class="live-badge">LIVE</span>
+                            <span class="room-category">DevOps</span>
+                        </div>
+                        <div class="room-card-content">
+                            <h3>CI/CD Pipeline Optimization</h3>
+                            <p>Streamlining your deployment workflow for efficiency</p>
+                            <div class="room-participants">
+                                <div class="participant-avatars">
+                                    <img src="../images/avatar-placeholder-3.jpg" alt="Participant" class="avatar-small">
+                                    <img src="../images/avatar-placeholder-4.jpg" alt="Participant" class="avatar-small">
+                                    <span class="avatar-count">+4</span>
+                                </div>
+                                <span class="participant-count">98 listening</span>
+                            </div>
+                        </div>
+                        <div class="room-card-footer">
+                            <button class="join-room-btn small">
+                                <i class="fas fa-headphones"></i>
+                                Join
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Rooms -->
+                <h2 class="section-title">Upcoming Rooms</h2>
+                <div class="upcoming-rooms">
+                    <!-- Upcoming Room 1 -->
+                    <div class="upcoming-room-card">
+                        <div class="upcoming-room-date">
+                            <span class="day">15</span>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="upcoming-room-info">
+                            <h3>Building Scalable Microservices</h3>
+                            <p>Learn how to design and implement microservices that scale</p>
+                            <div class="upcoming-room-details">
+                                <span class="time"><i class="far fa-clock"></i> 10:00 AM PST</span>
+                                <span class="duration"><i class="fas fa-hourglass-half"></i> 1 hour</span>
+                                <span class="hosts"><i class="fas fa-user"></i> Sarah Williams, Alex Johnson</span>
+                            </div>
+                        </div>
+                        <div class="upcoming-room-actions">
+                            <button class="remind-btn">
+                                <i class="far fa-bell"></i>
+                                Remind Me
+                            </button>
+                            <span class="interested-count">245 interested</span>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Room 2 -->
+                    <div class="upcoming-room-card">
+                        <div class="upcoming-room-date">
+                            <span class="day">18</span>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="upcoming-room-info">
+                            <h3>The State of AI in 2025</h3>
+                            <p>Exploring the latest advancements and applications of AI</p>
+                            <div class="upcoming-room-details">
+                                <span class="time"><i class="far fa-clock"></i> 2:00 PM PST</span>
+                                <span class="duration"><i class="fas fa-hourglass-half"></i> 1.5 hours</span>
+                                <span class="hosts"><i class="fas fa-user"></i> Michael Brown, Emily Davis</span>
+                            </div>
+                        </div>
+                        <div class="upcoming-room-actions">
+                            <button class="remind-btn">
+                                <i class="far fa-bell"></i>
+                                Remind Me
+                            </button>
+                            <span class="interested-count">312 interested</span>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Room 3 -->
+                    <div class="upcoming-room-card">
+                        <div class="upcoming-room-date">
+                            <span class="day">22</span>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="upcoming-room-info">
+                            <h3>From Junior to Senior Developer</h3>
+                            <p>Career growth strategies and skills development for developers</p>
+                            <div class="upcoming-room-details">
+                                <span class="time"><i class="far fa-clock"></i> 11:00 AM PST</span>
+                                <span class="duration"><i class="fas fa-hourglass-half"></i> 2 hours</span>
+                                <span class="hosts"><i class="fas fa-user"></i> David Wilson, Olivia Taylor</span>
+                            </div>
+                        </div>
+                        <div class="upcoming-room-actions">
+                            <button class="remind-btn">
+                                <i class="far fa-bell"></i>
+                                Remind Me
+                            </button>
+                            <span class="interested-count">178 interested</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Your Live Rooms -->
+            <div class="sidebar-section">
+                <h2>Your Scheduled Rooms</h2>
+                <div class="your-rooms">
+                    <div class="your-room-item">
+                        <div class="your-room-info">
+                            <h3>Code Review Best Practices</h3>
+                            <p><i class="far fa-calendar-alt"></i> June 25, 3:00 PM</p>
+                        </div>
+                        <div class="your-room-actions">
+                            <button class="edit-room-btn" title="Edit room">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-all-btn">View All</button>
+            </div>
+
+            <!-- People to Follow -->
+            <div class="sidebar-section">
+                <h2>Top Hosts to Follow</h2>
+                <div class="people-to-follow">
+                    <div class="person-item">
+                        <img src="../images/avatar-placeholder-5.jpg" alt="Person" class="avatar-small">
+                        <div class="person-info">
+                            <h3>Michael Brown</h3>
+                            <p>DevOps Engineer</p>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="person-item">
+                        <img src="../images/avatar-placeholder-6.jpg" alt="Person" class="avatar-small">
+                        <div class="person-info">
+                            <h3>Emily Davis</h3>
+                            <p>UX Designer</p>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="person-item">
+                        <img src="../images/avatar-placeholder-7.jpg" alt="Person" class="avatar-small">
+                        <div class="person-info">
+                            <h3>David Wilson</h3>
+                            <p>Senior Developer</p>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                </div>
+                <button class="view-all-btn">View All</button>
+            </div>
+
+            <!-- Popular Topics -->
+            <div class="sidebar-section">
+                <h2>Popular Topics</h2>
+                <div class="popular-topics">
+                    <a href="#" class="topic-tag">React</a>
+                    <a href="#" class="topic-tag">JavaScript</a>
+                    <a href="#" class="topic-tag">UX Design</a>
+                    <a href="#" class="topic-tag">Career Growth</a>
+                    <a href="#" class="topic-tag">DevOps</a>
+                    <a href="#" class="topic-tag">AI</a>
+                    <a href="#" class="topic-tag">Cloud Computing</a>
+                    <a href="#" class="topic-tag">Web3</a>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Ads Info</a>
+                <a href="#">More</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 BuilderSpace, Inc.
+            </div>
+        </aside>
+    </div>
+
+    <!-- Create Room Modal -->
+    <div class="modal" id="create-room-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create a Live Room</h2>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="create-room-form">
+                    <div class="form-group">
+                        <label for="room-title">Room Title</label>
+                        <input type="text" id="room-title" placeholder="Enter a title for your room" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="room-description">Description</label>
+                        <textarea id="room-description" placeholder="What will your room be about?" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="room-category">Category</label>
+                        <select id="room-category" required>
+                            <option value="">Select a category</option>
+                            <option value="tech">Tech</option>
+                            <option value="design">Design</option>
+                            <option value="career">Career</option>
+                            <option value="devops">DevOps</option>
+                            <option value="ai">AI</option>
+                            <option value="web">Web Development</option>
+                            <option value="mobile">Mobile Development</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Schedule</label>
+                        <div class="schedule-options">
+                            <label class="radio-option">
+                                <input type="radio" name="schedule" value="now" checked>
+                                <span>Start now</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="schedule" value="later">
+                                <span>Schedule for later</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group schedule-details" style="display: none;">
+                        <div class="date-time-picker">
+                            <div class="date-picker">
+                                <label for="room-date">Date</label>
+                                <input type="date" id="room-date">
+                            </div>
+                            <div class="time-picker">
+                                <label for="room-time">Time</label>
+                                <input type="time" id="room-time">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="room-co-hosts">Co-hosts (optional)</label>
+                        <input type="text" id="room-co-hosts" placeholder="@username, @username">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn">Cancel</button>
+                <button class="create-btn" type="submit" form="create-room-form">Create Room</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Menu -->
+    <div class="user-menu">
+        <a href="profile.html" class="user-menu-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="bookmarks.html" class="user-menu-item">
+            <i class="fas fa-bookmark"></i>
+            <span>Bookmarks</span>
+        </a>
+        <a href="settings.html" class="user-menu-item">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </a>
+        <div class="user-menu-divider"></div>
+        <a href="#" class="user-menu-item logout-btn danger" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/live-rooms.js"></script>
+</body>
+</html>

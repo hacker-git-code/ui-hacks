@@ -1,0 +1,51 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="about-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0ea5e9" />
+            <stop offset="100%" stop-color="#6366f1" />
+        </linearGradient>
+        <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#10b981" />
+            <stop offset="100%" stop-color="#3b82f6" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Background Elements -->
+    <rect x="50" y="50" width="500" height="300" rx="20" fill="url(#about-gradient)" opacity="0.05" />
+    <circle cx="150" cy="100" r="50" fill="url(#about-gradient)" opacity="0.1" />
+    <circle cx="450" cy="300" r="70" fill="url(#accent-gradient)" opacity="0.1" />
+    
+    <!-- Main Illustration -->
+    <rect x="150" y="120" width="300" height="160" rx="10" fill="url(#about-gradient)" opacity="0.2" />
+    
+    <!-- People Icons -->
+    <circle cx="200" cy="170" r="25" fill="url(#about-gradient)" />
+    <rect x="190" y="155" width="20" height="5" rx="2.5" fill="white" />
+    <rect x="190" y="165" width="20" height="5" rx="2.5" fill="white" />
+    <rect x="190" y="175" width="20" height="5" rx="2.5" fill="white" />
+    
+    <circle cx="300" cy="170" r="25" fill="url(#accent-gradient)" />
+    <rect x="290" y="155" width="20" height="5" rx="2.5" fill="white" />
+    <rect x="290" y="165" width="20" height="5" rx="2.5" fill="white" />
+    <rect x="290" y="175" width="20" height="5" rx="2.5" fill="white" />
+    
+    <circle cx="400" cy="170" r="25" fill="url(#about-gradient)" />
+    <rect x="390" y="155" width="20" height="5" rx="2.5" fill="white" />
+    <rect x="390" y="165" width="20" height="5" rx="2.5" fill="white" />
+    <rect x="390" y="175" width="20" height="5" rx="2.5" fill="white" />
+    
+    <!-- Connection Lines -->
+    <line x1="225" y1="170" x2="275" y2="170" stroke="url(#about-gradient)" stroke-width="3" stroke-dasharray="5,5" />
+    <line x1="325" y1="170" x2="375" y2="170" stroke="url(#accent-gradient)" stroke-width="3" stroke-dasharray="5,5" />
+    
+    <!-- Text Elements -->
+    <rect x="175" y="220" width="250" height="10" rx="5" fill="white" opacity="0.7" />
+    <rect x="200" y="240" width="200" height="10" rx="5" fill="white" opacity="0.5" />
+    <rect x="225" y="260" width="150" height="10" rx="5" fill="white" opacity="0.3" />
+    
+    <!-- Decorative Elements -->
+    <circle cx="100" cy="300" r="15" fill="url(#about-gradient)" opacity="0.6" />
+    <circle cx="500" cy="100" r="20" fill="url(#accent-gradient)" opacity="0.6" />
+    <rect x="80" y="150" width="30" height="30" rx="5" fill="url(#about-gradient)" opacity="0.4" transform="rotate(45 80 150)" />
+    <rect x="480" y="200" width="40" height="40" rx="8" fill="url(#accent-gradient)" opacity="0.4" transform="rotate(-15 480 200)" />
+</svg>

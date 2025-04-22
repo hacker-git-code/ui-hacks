@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - BuilderSpace</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/discover.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="logo">
+                    <img src="../images/BS.png" alt="BuilderSpace Logo" width="32" height="32">
+                    <h1>BuilderSpace</h1>
+                </a>
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="discover.html">
+                            <i class="fas fa-compass"></i>
+                            <span>Discover</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="live-rooms.html">
+                            <i class="fas fa-microphone"></i>
+                            <span>Live Rooms</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookmarks.html">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Bookmarks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="create-post-btn">
+                    <i class="fas fa-pen"></i>
+                    <span>Create Post</span>
+                </a>
+                <div class="user-profile">
+                    <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar">
+                    <div class="user-info">
+                        <h3>John Doe</h3>
+                        <p>@johndoe</p>
+                    </div>
+                    <div class="dropdown-menu">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <h1>Discover</h1>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search BuilderSpace">
+                    </div>
+                    <button class="filter-btn">
+                        <i class="fas fa-sliders-h"></i>
+                    </button>
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Discover Tabs -->
+            <div class="discover-tabs">
+                <button class="tab-btn active" data-tab="trending">Trending</button>
+                <button class="tab-btn" data-tab="developers">Developers</button>
+                <button class="tab-btn" data-tab="projects">Projects</button>
+                <button class="tab-btn" data-tab="topics">Topics</button>
+            </div>
+
+            <!-- Discover Content -->
+            <div class="discover-content">
+                <!-- Trending Tab Content -->
+                <div class="tab-content active" id="trending-content">
+                    <div class="trending-topics">
+                        <h2>Trending Topics</h2>
+                        <div class="topic-cards">
+                            <div class="topic-card">
+                                <div class="topic-header">
+                                    <h3>#ReactJS</h3>
+                                    <span class="topic-posts">2.5k posts</span>
+                                </div>
+                                <p>React 18 features and performance improvements</p>
+                            </div>
+                            <div class="topic-card">
+                                <div class="topic-header">
+                                    <h3>#WebDevelopment</h3>
+                                    <span class="topic-posts">1.8k posts</span>
+                                </div>
+                                <p>Latest trends in web development for 2025</p>
+                            </div>
+                            <div class="topic-card">
+                                <div class="topic-header">
+                                    <h3>#MachineLearning</h3>
+                                    <span class="topic-posts">1.2k posts</span>
+                                </div>
+                                <p>Practical applications of ML in everyday products</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trending-posts">
+                        <h2>Popular Posts</h2>
+                        <div class="post-card">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <img src="../images/avatar-placeholder-2.jpg" alt="Author Avatar" class="avatar-small">
+                                    <div class="author-info">
+                                        <div class="author-name">
+                                            <h4>Jane Smith</h4>
+                                            <span class="verified-badge"><i class="fas fa-check-circle"></i></span>
+                                        </div>
+                                        <p>@janesmith • 2h</p>
+                                    </div>
+                                </div>
+                                <div class="post-options">
+                                    <button class="options-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>Just launched my new open-source project! A lightweight state management library for React that's both powerful and easy to use. Check it out and let me know what you think! <a href="#" class="hashtag">#ReactJS</a> <a href="#" class="hashtag">#OpenSource</a></p>
+                                <div class="post-attachment">
+                                    <img src="../images/placeholder-image.jpg" alt="Project screenshot">
+                                </div>
+                            </div>
+                            <div class="post-footer">
+                                <div class="post-actions">
+                                    <button class="action-btn like-btn">
+                                        <i class="far fa-heart"></i>
+                                        <span class="count">128</span>
+                                    </button>
+                                    <button class="action-btn comment-btn">
+                                        <i class="far fa-comment"></i>
+                                        <span class="count">32</span>
+                                    </button>
+                                    <button class="action-btn share-btn">
+                                        <i class="far fa-share-square"></i>
+                                        <span class="count">24</span>
+                                    </button>
+                                    <button class="action-btn bookmark-btn">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post-card">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <img src="../images/avatar-placeholder-3.jpg" alt="Author Avatar" class="avatar-small">
+                                    <div class="author-info">
+                                        <div class="author-name">
+                                            <h4>Alex Johnson</h4>
+                                        </div>
+                                        <p>@alexj • 5h</p>
+                                    </div>
+                                </div>
+                                <div class="post-options">
+                                    <button class="options-btn"><i class="fas fa-ellipsis-h"></i></button>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>I've been experimenting with the new AI code generation tools. The results are mind-blowing! Here's a comparison of code written by me vs. AI-generated code. <a href="#" class="hashtag">#AI</a> <a href="#" class="hashtag">#Programming</a></p>
+                                <div class="post-attachment code-attachment">
+                                    <pre><code class="language-javascript">
+// My implementation
+function optimizeImages(images) {
+  return images.map(img => {
+    const optimized = processImage(img);
+    return { ...img, optimized, size: getFileSize(optimized) };
+  });
+}
+
+// AI-generated implementation
+const optimizeImages = images => 
+  images.map(img => {
+    const optimized = processImage(img);
+    return { 
+      ...img, 
+      optimized, 
+      size: getFileSize(optimized),
+      lastModified: new Date()
+    };
+  });
+                                    </code></pre>
+                                </div>
+                            </div>
+                            <div class="post-footer">
+                                <div class="post-actions">
+                                    <button class="action-btn like-btn">
+                                        <i class="far fa-heart"></i>
+                                        <span class="count">95</span>
+                                    </button>
+                                    <button class="action-btn comment-btn">
+                                        <i class="far fa-comment"></i>
+                                        <span class="count">18</span>
+                                    </button>
+                                    <button class="action-btn share-btn">
+                                        <i class="far fa-share-square"></i>
+                                        <span class="count">12</span>
+                                    </button>
+                                    <button class="action-btn bookmark-btn">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developers Tab Content -->
+                <div class="tab-content" id="developers-content">
+                    <div class="developers-grid">
+                        <div class="developer-card">
+                            <div class="developer-header">
+                                <img src="../images/avatar-placeholder-2.jpg" alt="Developer Avatar" class="avatar">
+                                <div class="developer-info">
+                                    <h3>Jane Smith</h3>
+                                    <p>@janesmith</p>
+                                </div>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                            <div class="developer-bio">
+                                <p>Full-stack developer specializing in React and Node.js. Open source contributor and tech blogger.</p>
+                            </div>
+                            <div class="developer-stats">
+                                <div class="stat">
+                                    <span class="count">128</span>
+                                    <span class="label">Posts</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="count">1.2k</span>
+                                    <span class="label">Followers</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="count">450</span>
+                                    <span class="label">Following</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="developer-card">
+                            <div class="developer-header">
+                                <img src="../images/avatar-placeholder-3.jpg" alt="Developer Avatar" class="avatar">
+                                <div class="developer-info">
+                                    <h3>Alex Johnson</h3>
+                                    <p>@alexj</p>
+                                </div>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                            <div class="developer-bio">
+                                <p>AI researcher and Python enthusiast. Building tools to make machine learning more accessible.</p>
+                            </div>
+                            <div class="developer-stats">
+                                <div class="stat">
+                                    <span class="count">95</span>
+                                    <span class="label">Posts</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="count">876</span>
+                                    <span class="label">Followers</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="count">320</span>
+                                    <span class="label">Following</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="developer-card">
+                            <div class="developer-header">
+                                <img src="../images/avatar-placeholder-4.jpg" alt="Developer Avatar" class="avatar">
+                                <div class="developer-info">
+                                    <h3>Sarah Williams</h3>
+                                    <p>@sarahw</p>
+                                </div>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                            <div class="developer-bio">
+                                <p>UX/UI designer with a passion for accessible and inclusive design. Currently working on design systems.</p>
+                            </div>
+                            <div class="developer-stats">
+                                <div class="stat">
+                                    <span class="count">72</span>
+                                    <span class="label">Posts</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="count">645</span>
+                                    <span class="label">Followers</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="count">280</span>
+                                    <span class="label">Following</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="developer-card">
+                            <div class="developer-header">
+                                <img src="../images/avatar-placeholder-5.jpg" alt="Developer Avatar" class="avatar">
+                                <div class="developer-info">
+                                    <h3>Michael Brown</h3>
+                                    <p>@mikebrown</p>
+                                </div>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                            <div class="developer-bio">
+                                <p>DevOps engineer specializing in cloud infrastructure and CI/CD pipelines. AWS certified architect.</p>
+                            </div>
+                            <div class="developer-stats">
+                                <div class="stat">
+                                    <span class="count">64</span>
+                                    <span class="label">Posts</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="count">520</span>
+                                    <span class="label">Followers</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="count">215</span>
+                                    <span class="label">Following</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Tab Content -->
+                <div class="tab-content" id="projects-content">
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>ReactState</h3>
+                                <div class="project-meta">
+                                    <span class="project-language"><i class="fas fa-code"></i> JavaScript</span>
+                                    <span class="project-stars"><i class="fas fa-star"></i> 1.2k</span>
+                                </div>
+                            </div>
+                            <p class="project-description">A lightweight state management library for React that's both powerful and easy to use.</p>
+                            <div class="project-footer">
+                                <div class="project-author">
+                                    <img src="../images/avatar-placeholder-2.jpg" alt="Author Avatar" class="avatar-small">
+                                    <span>Jane Smith</span>
+                                </div>
+                                <button class="star-btn"><i class="far fa-star"></i> Star</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>AICodeCompare</h3>
+                                <div class="project-meta">
+                                    <span class="project-language"><i class="fas fa-code"></i> Python</span>
+                                    <span class="project-stars"><i class="fas fa-star"></i> 876</span>
+                                </div>
+                            </div>
+                            <p class="project-description">Compare code written by humans vs AI-generated code. Analyze patterns and performance differences.</p>
+                            <div class="project-footer">
+                                <div class="project-author">
+                                    <img src="../images/avatar-placeholder-3.jpg" alt="Author Avatar" class="avatar-small">
+                                    <span>Alex Johnson</span>
+                                </div>
+                                <button class="star-btn"><i class="far fa-star"></i> Star</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>AccessibleUI</h3>
+                                <div class="project-meta">
+                                    <span class="project-language"><i class="fas fa-code"></i> CSS/HTML</span>
+                                    <span class="project-stars"><i class="fas fa-star"></i> 645</span>
+                                </div>
+                            </div>
+                            <p class="project-description">A collection of accessible UI components following WCAG guidelines. Ready to use in any project.</p>
+                            <div class="project-footer">
+                                <div class="project-author">
+                                    <img src="../images/avatar-placeholder-4.jpg" alt="Author Avatar" class="avatar-small">
+                                    <span>Sarah Williams</span>
+                                </div>
+                                <button class="star-btn"><i class="far fa-star"></i> Star</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>CloudDeploy</h3>
+                                <div class="project-meta">
+                                    <span class="project-language"><i class="fas fa-code"></i> Go</span>
+                                    <span class="project-stars"><i class="fas fa-star"></i> 520</span>
+                                </div>
+                            </div>
+                            <p class="project-description">Automated deployment tool for multi-cloud environments. Supports AWS, GCP, and Azure.</p>
+                            <div class="project-footer">
+                                <div class="project-author">
+                                    <img src="../images/avatar-placeholder-5.jpg" alt="Author Avatar" class="avatar-small">
+                                    <span>Michael Brown</span>
+                                </div>
+                                <button class="star-btn"><i class="far fa-star"></i> Star</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topics Tab Content -->
+                <div class="tab-content" id="topics-content">
+                    <div class="topics-grid">
+                        <div class="topic-card large">
+                            <div class="topic-header">
+                                <h3>#ReactJS</h3>
+                                <span class="topic-posts">2.5k posts</span>
+                            </div>
+                            <p>React 18 features and performance improvements</p>
+                            <div class="topic-tags">
+                                <span class="tag">Frontend</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">UI</span>
+                            </div>
+                        </div>
+
+                        <div class="topic-card large">
+                            <div class="topic-header">
+                                <h3>#WebDevelopment</h3>
+                                <span class="topic-posts">1.8k posts</span>
+                            </div>
+                            <p>Latest trends in web development for 2025</p>
+                            <div class="topic-tags">
+                                <span class="tag">Frontend</span>
+                                <span class="tag">Backend</span>
+                                <span class="tag">Full-Stack</span>
+                            </div>
+                        </div>
+
+                        <div class="topic-card large">
+                            <div class="topic-header">
+                                <h3>#MachineLearning</h3>
+                                <span class="topic-posts">1.2k posts</span>
+                            </div>
+                            <p>Practical applications of ML in everyday products</p>
+                            <div class="topic-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">Data Science</span>
+                                <span class="tag">Python</span>
+                            </div>
+                        </div>
+
+                        <div class="topic-card large">
+                            <div class="topic-header">
+                                <h3>#CloudComputing</h3>
+                                <span class="topic-posts">950 posts</span>
+                            </div>
+                            <p>Optimizing costs and performance in cloud environments</p>
+                            <div class="topic-tags">
+                                <span class="tag">AWS</span>
+                                <span class="tag">DevOps</span>
+                                <span class="tag">Infrastructure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Who to Follow Section -->
+            <div class="sidebar-section">
+                <h2>Who to Follow</h2>
+                <div class="follow-suggestions">
+                    <div class="suggestion-item">
+                        <img src="../images/avatar-placeholder-6.jpg" alt="User Avatar" class="avatar-small">
+                        <div class="suggestion-info">
+                            <h3>Emily Davis</h3>
+                            <p>@emilyd</p>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="../images/avatar-placeholder-7.jpg" alt="User Avatar" class="avatar-small">
+                        <div class="suggestion-info">
+                            <h3>David Wilson</h3>
+                            <p>@davidw</p>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="../images/avatar-placeholder-8.jpg" alt="User Avatar" class="avatar-small">
+                        <div class="suggestion-info">
+                            <h3>Olivia Taylor</h3>
+                            <p>@oliviat</p>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <a href="#" class="see-more">See more</a>
+                </div>
+            </div>
+
+            <!-- Trending Topics Section -->
+            <div class="sidebar-section">
+                <h2>Trending Topics</h2>
+                <div class="trending-topics">
+                    <div class="trending-item">
+                        <div class="trending-info">
+                            <span class="trending-category">Programming</span>
+                            <h3>#ReactJS</h3>
+                            <p>2.5k posts</p>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-info">
+                            <span class="trending-category">Web Development</span>
+                            <h3>#WebDevelopment</h3>
+                            <p>1.8k posts</p>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-info">
+                            <span class="trending-category">AI</span>
+                            <h3>#MachineLearning</h3>
+                            <p>1.2k posts</p>
+                        </div>
+                    </div>
+                    <a href="#" class="see-more">See more</a>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Ads Info</a>
+                <a href="#">More</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 BuilderSpace, Inc.
+            </div>
+        </aside>
+    </div>
+
+    <!-- User Menu -->
+    <div class="user-menu">
+        <a href="profile.html" class="user-menu-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="bookmarks.html" class="user-menu-item">
+            <i class="fas fa-bookmark"></i>
+            <span>Bookmarks</span>
+        </a>
+        <a href="settings.html" class="user-menu-item">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </a>
+        <div class="user-menu-divider"></div>
+        <a href="#" class="user-menu-item logout-btn danger" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/discover.js"></script>
+</body>
+</html>

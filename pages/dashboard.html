@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BuilderSpace</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#0ea5e9" />
+                                <stop offset="100%" stop-color="#6366f1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="20" cy="20" r="15" fill="url(#logo-gradient)" />
+                        <rect x="15" y="12" width="10" height="3" rx="1.5" fill="white" />
+                        <rect x="15" y="18" width="10" height="3" rx="1.5" fill="white" />
+                        <rect x="15" y="24" width="10" height="3" rx="1.5" fill="white" />
+                    </svg>
+                    <h1>BuilderSpace</h1>
+                </a>
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="discover.html">
+                            <i class="fas fa-compass"></i>
+                            <span>Discover</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="live-rooms.html">
+                            <i class="fas fa-microphone"></i>
+                            <span>Live Rooms</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookmarks.html">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Bookmarks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="create-post-btn">
+                    <i class="fas fa-pen"></i>
+                    <span>Create Post</span>
+                </a>
+                <div class="user-profile">
+                    <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar">
+                    <div class="user-info">
+                        <h3>John Doe</h3>
+                        <p>@johndoe</p>
+                    </div>
+                    <div class="dropdown-menu">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <h1>Home Feed</h1>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search BuilderSpace">
+                    </div>
+                    <button class="filter-btn">
+                        <i class="fas fa-filter"></i>
+                        <span>Filter</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Feed Content -->
+            <div class="feed-container">
+                <!-- Create Post Card -->
+                <div class="create-post-card">
+                    <div class="post-input-header">
+                        <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar">
+                        <div class="post-input" onclick="openPostModal()">
+                            <span>What are you building today?</span>
+                        </div>
+                    </div>
+                    <div class="post-tools">
+                        <button class="tool-btn" onclick="openPostModalWithTool('image')">
+                            <i class="fas fa-image"></i>
+                            <span>Image</span>
+                        </button>
+                        <button class="tool-btn" onclick="openPostModalWithTool('video')">
+                            <i class="fas fa-video"></i>
+                            <span>Video</span>
+                        </button>
+                        <button class="tool-btn" onclick="openPostModalWithTool('code')">
+                            <i class="fas fa-code"></i>
+                            <span>Code</span>
+                        </button>
+                        <button class="tool-btn" onclick="openPostModalWithTool('link')">
+                            <i class="fas fa-link"></i>
+                            <span>Link</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Rooms Section -->
+                <div class="live-rooms-section">
+                    <div class="section-header">
+                        <h2>Live Now</h2>
+                        <a href="live-rooms.html" class="view-all">View All</a>
+                    </div>
+                    <div class="live-rooms-container">
+                        <div class="live-room-card">
+                            <div class="live-room-header">
+                                <div class="live-badge">LIVE</div>
+                                <span class="listeners"><i class="fas fa-headphones"></i> 42</span>
+                            </div>
+                            <h3>Building in Public: Day 15</h3>
+                            <div class="host-info">
+                                <img src="../images/avatar-placeholder.jpg" alt="Host Avatar" class="avatar-small">
+                                <span>Sarah Johnson</span>
+                            </div>
+                            <button class="join-room-btn">Join Room</button>
+                        </div>
+                        <div class="live-room-card">
+                            <div class="live-room-header">
+                                <div class="live-badge">LIVE</div>
+                                <span class="listeners"><i class="fas fa-headphones"></i> 127</span>
+                            </div>
+                            <h3>Tech Stack Decisions for MVPs</h3>
+                            <div class="host-info">
+                                <img src="../images/avatar-placeholder.jpg" alt="Host Avatar" class="avatar-small">
+                                <span>Alex Chen</span>
+                            </div>
+                            <button class="join-room-btn">Join Room</button>
+                        </div>
+                        <div class="live-room-card">
+                            <div class="live-room-header">
+                                <div class="live-badge">LIVE</div>
+                                <span class="listeners"><i class="fas fa-headphones"></i> 85</span>
+                            </div>
+                            <h3>UX Design Principles for Developers</h3>
+                            <div class="host-info">
+                                <img src="../images/avatar-placeholder.jpg" alt="Host Avatar" class="avatar-small">
+                                <span>Maya Patel</span>
+                            </div>
+                            <button class="join-room-btn">Join Room</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feed Posts -->
+                <div class="feed-posts">
+                    <!-- Post 1 -->
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <img src="../images/avatar-placeholder.jpg" alt="Author Avatar" class="avatar-small">
+                                <div class="author-info">
+                                    <h3>Sarah Johnson <span class="verified-badge"><i class="fas fa-check"></i></span></h3>
+                                    <p>@sarahjohnson · 2h ago</p>
+                                </div>
+                            </div>
+                            <div class="post-options">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>Just shipped a major update to my SaaS product! 🚀 After 3 weeks of intense coding and user testing, we've completely revamped the dashboard UI and added 5 new features our users have been requesting.</p>
+                            <p>Key improvements:</p>
+                            <ul>
+                                <li>Real-time collaboration</li>
+                                <li>Custom reporting</li>
+                                <li>API integration with popular tools</li>
+                                <li>Dark mode (finally!)</li>
+                                <li>Mobile app beta</li>
+                            </ul>
+                            <p>Thanks to everyone who provided feedback during the beta!</p>
+                            <div class="post-image">
+                                <img src="../images/post-image-placeholder.jpg" alt="Dashboard Screenshot">
+                            </div>
+                        </div>
+                        <div class="post-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-heart"></i>
+                                <span>142</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-comment"></i>
+                                <span>38</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-retweet"></i>
+                                <span>24</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-bookmark"></i>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                        </div>
+                        <div class="post-comments">
+                            <div class="comment">
+                                <img src="../images/avatar-placeholder.jpg" alt="Commenter Avatar" class="avatar-small">
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <h4>Alex Chen</h4>
+                                        <span>@alexchen · 1h ago</span>
+                                    </div>
+                                    <p>The new dashboard looks amazing! Can't wait to try the API integrations.</p>
+                                    <div class="comment-actions">
+                                        <button><i class="fas fa-heart"></i> 12</button>
+                                        <button><i class="fas fa-reply"></i> Reply</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="view-more-comments">View all 38 comments</button>
+                            <div class="add-comment">
+                                <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar-small">
+                                <input type="text" placeholder="Add a comment..." class="comment-input">
+                                <button class="send-comment-btn"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <img src="../images/avatar-placeholder.jpg" alt="Author Avatar" class="avatar-small">
+                                <div class="author-info">
+                                    <h3>David Wilson</h3>
+                                    <p>@davidwilson · 5h ago</p>
+                                </div>
+                            </div>
+                            <div class="post-options">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>Looking for feedback on my new open-source project: a lightweight state management library for React that focuses on simplicity and performance.</p>
+                            <p>GitHub repo: <a href="#">github.com/davidwilson/simple-state</a></p>
+                            <div class="code-block">
+                                <pre><code>
+// Example usage
+import { createStore } from 'simple-state';
+
+const store = createStore({
+  count: 0,
+  user: null
+});
+
+// Subscribe to changes
+store.subscribe(state => {
+  console.log('New state:', state);
+});
+
+// Update state
+store.update(state => ({
+  ...state,
+  count: state.count + 1
+}));
+                                </code></pre>
+                            </div>
+                            <p>Would love to hear your thoughts, especially on the API design!</p>
+                        </div>
+                        <div class="post-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-heart"></i>
+                                <span>87</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-comment"></i>
+                                <span>19</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-retweet"></i>
+                                <span>12</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-bookmark"></i>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                        </div>
+                        <div class="post-comments">
+                            <button class="view-more-comments">View all 19 comments</button>
+                            <div class="add-comment">
+                                <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar-small">
+                                <input type="text" placeholder="Add a comment..." class="comment-input">
+                                <button class="send-comment-btn"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Who to Follow Section -->
+            <div class="sidebar-section">
+                <h2>Who to Follow</h2>
+                <div class="follow-suggestions">
+                    <div class="suggestion-item">
+                        <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar-small">
+                        <div class="suggestion-info">
+                            <h3>Emily Zhang</h3>
+                            <p>@emilyzhang</p>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar-small">
+                        <div class="suggestion-info">
+                            <h3>Michael Brown</h3>
+                            <p>@michaelbrown</p>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar-small">
+                        <div class="suggestion-info">
+                            <h3>Sophia Lee</h3>
+                            <p>@sophialee</p>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <a href="#" class="view-more">View more</a>
+                </div>
+            </div>
+
+            <!-- Trending Topics Section -->
+            <div class="sidebar-section">
+                <h2>Trending Topics</h2>
+                <div class="trending-topics">
+                    <div class="topic-item">
+                        <div class="topic-category">Technology</div>
+                        <h3>#WebDevelopment</h3>
+                        <p>1.2K posts</p>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-category">Startups</div>
+                        <h3>#BuildInPublic</h3>
+                        <p>856 posts</p>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-category">Design</div>
+                        <h3>#UIUXDesign</h3>
+                        <p>723 posts</p>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-category">AI</div>
+                        <h3>#MachineLearning</h3>
+                        <p>645 posts</p>
+                    </div>
+                    <a href="#" class="view-more">View more</a>
+                </div>
+            </div>
+
+            <!-- Upcoming Events Section -->
+            <div class="sidebar-section">
+                <h2>Upcoming Events</h2>
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <div class="date-box">
+                                <span class="month">APR</span>
+                                <span class="day">15</span>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <h3>Founder Fireside Chat</h3>
+                            <p><i class="fas fa-clock"></i> 7:00 PM - 8:30 PM</p>
+                            <p><i class="fas fa-users"></i> 128 attending</p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <div class="date-box">
+                                <span class="month">APR</span>
+                                <span class="day">22</span>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <h3>Tech Stack Workshop</h3>
+                            <p><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                            <p><i class="fas fa-users"></i> 75 attending</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-more">View all events</a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="sidebar-footer">
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Help</a>
+                </div>
+                <p> 2025 BuilderSpace</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Create Post Modal -->
+    <div class="modal" id="create-post-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Post</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="post-creator-header">
+                    <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar-small">
+                    <div class="post-creator-info">
+                        <h3>John Doe</h3>
+                        <select class="visibility-selector">
+                            <option value="public">Public</option>
+                            <option value="followers">Followers Only</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="post-editor">
+                    <textarea placeholder="What are you building today?" class="post-textarea"></textarea>
+                    <div class="post-preview" id="post-preview"></div>
+                </div>
+                <div class="post-attachments">
+                    <div class="attachment-preview" id="attachment-preview"></div>
+                </div>
+                <div class="post-tools">
+                    <button class="tool-btn" data-tool="image">
+                        <i class="fas fa-image"></i>
+                        <span>Image</span>
+                    </button>
+                    <button class="tool-btn" data-tool="video">
+                        <i class="fas fa-video"></i>
+                        <span>Video</span>
+                    </button>
+                    <button class="tool-btn" data-tool="code">
+                        <i class="fas fa-code"></i>
+                        <span>Code</span>
+                    </button>
+                    <button class="tool-btn" data-tool="link">
+                        <i class="fas fa-link"></i>
+                        <span>Link</span>
+                    </button>
+                    <button class="tool-btn" data-tool="poll">
+                        <i class="fas fa-poll"></i>
+                        <span>Poll</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary">Save Draft</button>
+                <button class="btn-primary" onclick="publishPost()">Publish</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/posts.js"></script>
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks - BuilderSpace</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/bookmarks.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="logo">
+                    <img src="../images/BS.png" alt="BuilderSpace Logo" width="32" height="32">
+                    <h1>BuilderSpace</h1>
+                </a>
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="discover.html">
+                            <i class="fas fa-compass"></i>
+                            <span>Discover</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="live-rooms.html">
+                            <i class="fas fa-microphone"></i>
+                            <span>Live Rooms</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="bookmarks.html">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Bookmarks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="create-post-btn">
+                    <i class="fas fa-pen"></i>
+                    <span>Create Post</span>
+                </a>
+                <div class="user-profile">
+                    <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar">
+                    <div class="user-info">
+                        <h3>John Doe</h3>
+                        <p>@johndoe</p>
+                    </div>
+                    <div class="dropdown-menu">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <h1>Bookmarks</h1>
+                <div class="header-actions">
+                    <button class="filter-btn" title="Filter bookmarks">
+                        <i class="fas fa-filter"></i>
+                    </button>
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Bookmark Tabs -->
+            <div class="bookmark-tabs">
+                <button class="tab-btn active" data-tab="all">All Bookmarks</button>
+                <button class="tab-btn" data-tab="posts">Posts</button>
+                <button class="tab-btn" data-tab="articles">Articles</button>
+                <button class="tab-btn" data-tab="projects">Projects</button>
+                <button class="tab-btn" data-tab="code">Code Snippets</button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-filter-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search bookmarks...">
+                </div>
+                <div class="sort-options">
+                    <span>Sort by:</span>
+                    <select class="sort-select">
+                        <option value="recent">Most Recent</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Bookmarks List -->
+            <div class="bookmarks-container">
+                <!-- Bookmark Collections -->
+                <div class="bookmark-collections">
+                    <h2 class="section-title">Collections</h2>
+                    <div class="collections-grid">
+                        <div class="collection-card">
+                            <div class="collection-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="collection-info">
+                                <h3>JavaScript Resources</h3>
+                                <p>12 items</p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <div class="collection-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="collection-info">
+                                <h3>UI Design Inspiration</h3>
+                                <p>8 items</p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <div class="collection-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="collection-info">
+                                <h3>Learning Resources</h3>
+                                <p>15 items</p>
+                            </div>
+                        </div>
+                        <div class="collection-card">
+                            <div class="collection-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="collection-info">
+                                <h3>Project Ideas</h3>
+                                <p>6 items</p>
+                            </div>
+                        </div>
+                        <div class="collection-card add-collection">
+                            <div class="add-collection-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <p>Create Collection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Bookmarks -->
+                <div class="recent-bookmarks">
+                    <div class="section-header">
+                        <h2 class="section-title">Recent Bookmarks</h2>
+                        <button class="edit-btn">
+                            <i class="fas fa-edit"></i>
+                            <span>Edit</span>
+                        </button>
+                    </div>
+
+                    <!-- Bookmark Items -->
+                    <div class="bookmark-items">
+                        <!-- Bookmark Item 1 -->
+                        <div class="bookmark-item">
+                            <div class="bookmark-content">
+                                <div class="bookmark-header">
+                                    <div class="bookmark-meta">
+                                        <span class="bookmark-type post">Post</span>
+                                        <span class="bookmark-date">Saved 2 days ago</span>
+                                    </div>
+                                    <div class="bookmark-actions">
+                                        <button class="add-to-collection-btn" title="Add to collection">
+                                            <i class="fas fa-folder-plus"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                        <button class="remove-bookmark-btn" title="Remove bookmark">
+                                            <i class="fas fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="bookmark-author">
+                                    <img src="../images/avatar-placeholder-2.jpg" alt="Jane Smith" class="avatar-small">
+                                    <div class="author-info">
+                                        <h4>Jane Smith</h4>
+                                        <p>@janesmith · Software Engineer</p>
+                                    </div>
+                                </div>
+                                <div class="bookmark-body">
+                                    <h3>10 Advanced React Patterns Every Developer Should Know</h3>
+                                    <p>I've compiled a list of advanced React patterns that have significantly improved my code quality and component reusability. These patterns have been battle-tested in production applications...</p>
+                                </div>
+                                <div class="bookmark-footer">
+                                    <div class="bookmark-stats">
+                                        <span><i class="far fa-heart"></i> 245</span>
+                                        <span><i class="far fa-comment"></i> 42</span>
+                                        <span><i class="far fa-bookmark"></i> 78</span>
+                                    </div>
+                                    <a href="#" class="read-more-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bookmark Item 2 -->
+                        <div class="bookmark-item">
+                            <div class="bookmark-content">
+                                <div class="bookmark-header">
+                                    <div class="bookmark-meta">
+                                        <span class="bookmark-type article">Article</span>
+                                        <span class="bookmark-date">Saved 5 days ago</span>
+                                    </div>
+                                    <div class="bookmark-actions">
+                                        <button class="add-to-collection-btn" title="Add to collection">
+                                            <i class="fas fa-folder-plus"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                        <button class="remove-bookmark-btn" title="Remove bookmark">
+                                            <i class="fas fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="bookmark-author">
+                                    <img src="../images/avatar-placeholder-3.jpg" alt="Alex Johnson" class="avatar-small">
+                                    <div class="author-info">
+                                        <h4>Alex Johnson</h4>
+                                        <p>@alexj · Frontend Developer</p>
+                                    </div>
+                                </div>
+                                <div class="bookmark-body">
+                                    <h3>The Complete Guide to CSS Grid Layout</h3>
+                                    <p>CSS Grid has revolutionized web layout design. In this comprehensive guide, I'll walk you through everything from basic grid concepts to advanced techniques for creating responsive, complex layouts...</p>
+                                </div>
+                                <div class="bookmark-footer">
+                                    <div class="bookmark-stats">
+                                        <span><i class="far fa-heart"></i> 189</span>
+                                        <span><i class="far fa-comment"></i> 36</span>
+                                        <span><i class="far fa-bookmark"></i> 92</span>
+                                    </div>
+                                    <a href="#" class="read-more-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bookmark Item 3 -->
+                        <div class="bookmark-item">
+                            <div class="bookmark-content">
+                                <div class="bookmark-header">
+                                    <div class="bookmark-meta">
+                                        <span class="bookmark-type project">Project</span>
+                                        <span class="bookmark-date">Saved 1 week ago</span>
+                                    </div>
+                                    <div class="bookmark-actions">
+                                        <button class="add-to-collection-btn" title="Add to collection">
+                                            <i class="fas fa-folder-plus"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                        <button class="remove-bookmark-btn" title="Remove bookmark">
+                                            <i class="fas fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="bookmark-author">
+                                    <img src="../images/avatar-placeholder-4.jpg" alt="Sarah Williams" class="avatar-small">
+                                    <div class="author-info">
+                                        <h4>Sarah Williams</h4>
+                                        <p>@sarahw · Full Stack Developer</p>
+                                    </div>
+                                </div>
+                                <div class="bookmark-body">
+                                    <h3>BuilderKit: A Component Library for React Developers</h3>
+                                    <p>Excited to share my latest open-source project! BuilderKit is a comprehensive React component library designed for developers who want to build beautiful UIs without sacrificing customization...</p>
+                                    <div class="project-preview">
+                                        <div class="project-stats">
+                                            <span><i class="fas fa-star"></i> 342</span>
+                                            <span><i class="fas fa-code-branch"></i> 78</span>
+                                            <span><i class="fas fa-eye"></i> 1.2k</span>
+                                        </div>
+                                        <div class="project-tech">
+                                            <span class="tech-tag">React</span>
+                                            <span class="tech-tag">TypeScript</span>
+                                            <span class="tech-tag">Styled Components</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bookmark-footer">
+                                    <div class="bookmark-stats">
+                                        <span><i class="far fa-heart"></i> 215</span>
+                                        <span><i class="far fa-comment"></i> 29</span>
+                                        <span><i class="far fa-bookmark"></i> 64</span>
+                                    </div>
+                                    <a href="#" class="view-project-btn">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bookmark Item 4 -->
+                        <div class="bookmark-item">
+                            <div class="bookmark-content">
+                                <div class="bookmark-header">
+                                    <div class="bookmark-meta">
+                                        <span class="bookmark-type code">Code Snippet</span>
+                                        <span class="bookmark-date">Saved 2 weeks ago</span>
+                                    </div>
+                                    <div class="bookmark-actions">
+                                        <button class="add-to-collection-btn" title="Add to collection">
+                                            <i class="fas fa-folder-plus"></i>
+                                        </button>
+                                        <button class="share-btn" title="Share">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+                                        <button class="remove-bookmark-btn" title="Remove bookmark">
+                                            <i class="fas fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="bookmark-author">
+                                    <img src="../images/avatar-placeholder-5.jpg" alt="Michael Brown" class="avatar-small">
+                                    <div class="author-info">
+                                        <h4>Michael Brown</h4>
+                                        <p>@michaelb · Senior Developer</p>
+                                    </div>
+                                </div>
+                                <div class="bookmark-body">
+                                    <h3>Custom React Hook for Managing API Requests</h3>
+                                    <p>I created this custom hook to simplify API requests in React applications. It handles loading states, errors, and caching automatically.</p>
+                                    <div class="code-snippet">
+                                        <pre><code>function useApi(url, options = {}) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(url, options);
+        const result = await response.json();
+        setData(result);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchData();
+  }, [url]);
+  
+  return { data, loading, error };
+}</code></pre>
+                                        <div class="code-actions">
+                                            <button class="copy-btn" title="Copy code">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bookmark-footer">
+                                    <div class="bookmark-stats">
+                                        <span><i class="far fa-heart"></i> 176</span>
+                                        <span><i class="far fa-comment"></i> 23</span>
+                                        <span><i class="far fa-bookmark"></i> 105</span>
+                                    </div>
+                                    <a href="#" class="view-full-btn">View Full</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Load More Button -->
+                    <button class="load-more-btn">
+                        <i class="fas fa-spinner"></i>
+                        <span>Load More</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Bookmark Stats -->
+            <div class="sidebar-section">
+                <h2>Bookmark Stats</h2>
+                <div class="bookmark-stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-count">42</span>
+                            <span class="stat-label">Total Bookmarks</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-folder"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-count">5</span>
+                            <span class="stat-label">Collections</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-count">12</span>
+                            <span class="stat-label">This Week</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Tags -->
+            <div class="sidebar-section">
+                <h2>Popular Tags</h2>
+                <div class="tags-cloud">
+                    <a href="#" class="tag">JavaScript</a>
+                    <a href="#" class="tag">React</a>
+                    <a href="#" class="tag">CSS</a>
+                    <a href="#" class="tag">UI Design</a>
+                    <a href="#" class="tag">TypeScript</a>
+                    <a href="#" class="tag">Node.js</a>
+                    <a href="#" class="tag">API</a>
+                    <a href="#" class="tag">Performance</a>
+                    <a href="#" class="tag">Accessibility</a>
+                    <a href="#" class="tag">Git</a>
+                </div>
+            </div>
+
+            <!-- Reading List -->
+            <div class="sidebar-section">
+                <h2>Reading List</h2>
+                <div class="reading-list">
+                    <div class="reading-item">
+                        <div class="reading-progress">
+                            <div class="progress-bar" style="width: 75%;"></div>
+                        </div>
+                        <div class="reading-info">
+                            <h3>Understanding the Event Loop in JavaScript</h3>
+                            <p>75% completed</p>
+                        </div>
+                    </div>
+                    <div class="reading-item">
+                        <div class="reading-progress">
+                            <div class="progress-bar" style="width: 30%;"></div>
+                        </div>
+                        <div class="reading-info">
+                            <h3>Advanced TypeScript Patterns</h3>
+                            <p>30% completed</p>
+                        </div>
+                    </div>
+                    <div class="reading-item">
+                        <div class="reading-progress">
+                            <div class="progress-bar" style="width: 10%;"></div>
+                        </div>
+                        <div class="reading-info">
+                            <h3>Building Scalable Microservices</h3>
+                            <p>10% completed</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-all-btn">View All</button>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Ads Info</a>
+                <a href="#">More</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 BuilderSpace, Inc.
+            </div>
+        </aside>
+    </div>
+
+    <!-- Collection Modal -->
+    <div class="modal" id="collection-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add to Collection</h2>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="collections-list">
+                    <div class="collection-item">
+                        <label class="collection-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <div class="collection-label">
+                                <i class="fas fa-code"></i>
+                                <span>JavaScript Resources</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="collection-item">
+                        <label class="collection-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <div class="collection-label">
+                                <i class="fas fa-paint-brush"></i>
+                                <span>UI Design Inspiration</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="collection-item">
+                        <label class="collection-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <div class="collection-label">
+                                <i class="fas fa-book"></i>
+                                <span>Learning Resources</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="collection-item">
+                        <label class="collection-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <div class="collection-label">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Project Ideas</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="create-new-collection">
+                    <button class="new-collection-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>Create New Collection</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn">Cancel</button>
+                <button class="save-btn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Menu -->
+    <div class="user-menu">
+        <a href="profile.html" class="user-menu-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="bookmarks.html" class="user-menu-item">
+            <i class="fas fa-bookmark"></i>
+            <span>Bookmarks</span>
+        </a>
+        <a href="settings.html" class="user-menu-item">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </a>
+        <div class="user-menu-divider"></div>
+        <a href="#" class="user-menu-item logout-btn danger" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/bookmarks.js"></script>
+</body>
+</html>

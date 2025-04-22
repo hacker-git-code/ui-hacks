@@ -1,0 +1,55 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="contact-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0ea5e9" />
+            <stop offset="100%" stop-color="#6366f1" />
+        </linearGradient>
+        <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f59e0b" />
+            <stop offset="100%" stop-color="#ef4444" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Background Elements -->
+    <rect x="50" y="50" width="500" height="300" rx="20" fill="url(#contact-gradient)" opacity="0.05" />
+    <circle cx="150" cy="100" r="50" fill="url(#contact-gradient)" opacity="0.1" />
+    <circle cx="450" cy="300" r="70" fill="url(#accent-gradient)" opacity="0.1" />
+    
+    <!-- Main Illustration - Message Bubble -->
+    <rect x="150" y="120" width="300" height="180" rx="20" fill="url(#contact-gradient)" opacity="0.2" />
+    <path d="M150 140C150 128.954 158.954 120 170 120H430C441.046 120 450 128.954 450 140V260C450 271.046 441.046 280 430 280H200L150 330V140Z" fill="white" opacity="0.1" />
+    
+    <!-- Envelope Icon -->
+    <rect x="250" y="150" width="100" height="70" rx="5" fill="url(#contact-gradient)" opacity="0.6" />
+    <path d="M250 150L300 190L350 150" stroke="white" stroke-width="3" />
+    <path d="M250 220L280 190" stroke="white" stroke-width="3" />
+    <path d="M350 220L320 190" stroke="white" stroke-width="3" />
+    
+    <!-- Contact Icons -->
+    <circle cx="200" cy="250" r="15" fill="url(#contact-gradient)" />
+    <path d="M195 250C195 247.239 197.239 245 200 245C202.761 245 205 247.239 205 250C205 252.761 202.761 255 200 255C197.239 255 195 252.761 195 250Z" fill="white" />
+    <path d="M200 255V260" stroke="white" stroke-width="2" stroke-linecap="round" />
+    <path d="M200 240V245" stroke="white" stroke-width="2" stroke-linecap="round" />
+    <path d="M205 250H210" stroke="white" stroke-width="2" stroke-linecap="round" />
+    <path d="M190 250H195" stroke="white" stroke-width="2" stroke-linecap="round" />
+    
+    <circle cx="300" cy="250" r="15" fill="url(#accent-gradient)" />
+    <path d="M295 248H305" stroke="white" stroke-width="2" stroke-linecap="round" />
+    <path d="M295 252H305" stroke="white" stroke-width="2" stroke-linecap="round" />
+    
+    <circle cx="400" cy="250" r="15" fill="url(#contact-gradient)" />
+    <path d="M395 245L405 255" stroke="white" stroke-width="2" stroke-linecap="round" />
+    <path d="M405 245L395 255" stroke="white" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- Decorative Elements -->
+    <circle cx="100" cy="300" r="15" fill="url(#contact-gradient)" opacity="0.6" />
+    <circle cx="500" cy="100" r="20" fill="url(#accent-gradient)" opacity="0.6" />
+    <rect x="80" y="150" width="30" height="30" rx="5" fill="url(#contact-gradient)" opacity="0.4" transform="rotate(45 80 150)" />
+    <rect x="480" y="200" width="40" height="40" rx="8" fill="url(#accent-gradient)" opacity="0.4" transform="rotate(-15 480 200)" />
+    
+    <!-- Small Dots -->
+    <circle cx="150" cy="200" r="5" fill="url(#contact-gradient)" opacity="0.8" />
+    <circle cx="450" cy="150" r="5" fill="url(#accent-gradient)" opacity="0.8" />
+    <circle cx="200" cy="300" r="5" fill="url(#contact-gradient)" opacity="0.8" />
+    <circle cx="400" cy="100" r="5" fill="url(#accent-gradient)" opacity="0.8" />
+</svg>

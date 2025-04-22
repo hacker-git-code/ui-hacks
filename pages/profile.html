@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - BuilderSpace</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#0ea5e9" />
+                                <stop offset="100%" stop-color="#6366f1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="20" cy="20" r="15" fill="url(#logo-gradient)" />
+                        <rect x="15" y="12" width="10" height="3" rx="1.5" fill="white" />
+                        <rect x="15" y="18" width="10" height="3" rx="1.5" fill="white" />
+                        <rect x="15" y="24" width="10" height="3" rx="1.5" fill="white" />
+                    </svg>
+                    <h1>BuilderSpace</h1>
+                </a>
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="discover.html">
+                            <i class="fas fa-compass"></i>
+                            <span>Discover</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="live-rooms.html">
+                            <i class="fas fa-microphone"></i>
+                            <span>Live Rooms</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookmarks.html">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Bookmarks</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="create-post-btn">
+                    <i class="fas fa-pen"></i>
+                    <span>Create Post</span>
+                </a>
+                <div class="user-profile">
+                    <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar">
+                    <div class="user-info">
+                        <h3>John Doe</h3>
+                        <p>@johndoe</p>
+                    </div>
+                    <div class="dropdown-menu">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <div class="header-back">
+                    <a href="dashboard.html"><i class="fas fa-arrow-left"></i></a>
+                    <div>
+                        <h1 id="profile-name">Profile</h1>
+                        <span id="post-count" class="post-count">0 posts</span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-cover">
+                    <img src="../images/cover-placeholder.jpg" alt="Cover Image" id="cover-image">
+                    <button class="edit-cover-btn"><i class="fas fa-camera"></i></button>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar-large" id="profile-avatar">
+                        <button class="edit-avatar-btn"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="edit-profile-btn">Edit profile</button>
+                        <button class="share-profile-btn"><i class="fas fa-share-alt"></i></button>
+                    </div>
+                </div>
+                <div class="profile-details">
+                    <h1 id="profile-display-name">John Doe</h1>
+                    <p class="username" id="profile-username">@johndoe</p>
+                    <div class="profile-bio" id="profile-bio">
+                        <p>Full-stack developer building cool stuff. Passionate about web technologies and open source.</p>
+                    </div>
+                    <div class="profile-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> <span id="profile-location">San Francisco, CA</span></span>
+                        <span><i class="fas fa-link"></i> <a href="#" id="profile-website">example.com</a></span>
+                        <span><i class="fas fa-calendar-alt"></i> Joined <span id="profile-joined">March 2023</span></span>
+                    </div>
+                    <div class="profile-stats">
+                        <a href="#" class="stat-item"><span id="following-count">245</span> Following</a>
+                        <a href="#" class="stat-item"><span id="followers-count">1.2K</span> Followers</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Tabs -->
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="posts">Posts</button>
+                <button class="tab-btn" data-tab="replies">Replies</button>
+                <button class="tab-btn" data-tab="media">Media</button>
+                <button class="tab-btn" data-tab="likes">Likes</button>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <!-- Posts Tab (Default) -->
+                <div class="tab-content active" id="posts-tab">
+                    <div class="feed-posts" id="user-posts">
+                        <!-- Posts will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Replies Tab -->
+                <div class="tab-content" id="replies-tab">
+                    <div class="feed-posts" id="user-replies">
+                        <!-- Replies will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Media Tab -->
+                <div class="tab-content" id="media-tab">
+                    <div class="media-grid" id="user-media">
+                        <!-- Media will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Likes Tab -->
+                <div class="tab-content" id="likes-tab">
+                    <div class="feed-posts" id="user-likes">
+                        <!-- Liked posts will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Who to Follow Section -->
+            <div class="sidebar-section">
+                <h2>Who to Follow</h2>
+                <div class="follow-suggestions" id="follow-suggestions">
+                    <!-- Suggestions will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Trending Topics Section -->
+            <div class="sidebar-section">
+                <h2>Trending Topics</h2>
+                <div class="trending-topics" id="trending-topics">
+                    <!-- Trending topics will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Ads Info</a>
+                <a href="#">More</a>
+            </div>
+            <div class="footer-copyright">
+                © 2025 BuilderSpace, Inc.
+            </div>
+        </aside>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="edit-profile-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="edit-profile-form">
+                    <div class="form-group">
+                        <label for="edit-name">Name</label>
+                        <input type="text" id="edit-name" name="name" maxlength="50">
+                        <span class="character-count">50</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-bio">Bio</label>
+                        <textarea id="edit-bio" name="bio" maxlength="160"></textarea>
+                        <span class="character-count">160</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-location">Location</label>
+                        <input type="text" id="edit-location" name="location" maxlength="30">
+                        <span class="character-count">30</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-website">Website</label>
+                        <input type="url" id="edit-website" name="website" placeholder="https://example.com">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="save-profile-btn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Post Modal -->
+    <div class="modal" id="create-post-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Post</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="post-creator-header">
+                    <img src="../images/avatar-placeholder.jpg" alt="User Avatar" class="avatar-small">
+                    <div class="post-creator-info">
+                        <h3>John Doe</h3>
+                        <select class="visibility-selector">
+                            <option value="public">Public</option>
+                            <option value="followers">Followers Only</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="post-editor">
+                    <textarea placeholder="What are you building today?" class="post-textarea"></textarea>
+                    <div class="post-preview" id="post-preview"></div>
+                </div>
+                <div class="post-attachments">
+                    <div class="attachment-preview" id="attachment-preview"></div>
+                </div>
+                <div class="post-tools">
+                    <button class="tool-btn" data-tool="image">
+                        <i class="fas fa-image"></i>
+                        <span>Media</span>
+                    </button>
+                    <button class="tool-btn" data-tool="code">
+                        <i class="fas fa-code"></i>
+                        <span>Code</span>
+                    </button>
+                    <button class="tool-btn" data-tool="emoji">
+                        <i class="fas fa-smile"></i>
+                        <span>Emoji</span>
+                    </button>
+                    <button class="tool-btn" data-tool="poll">
+                        <i class="fas fa-poll"></i>
+                        <span>Poll</span>
+                    </button>
+                </div>
+            </div>
+            <div class="post-modal-footer">
+                <span class="character-count">280</span>
+                <button class="post-submit-btn" disabled>Post</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Menu -->
+    <div class="user-menu">
+        <a href="profile.html" class="user-menu-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+        <a href="bookmarks.html" class="user-menu-item">
+            <i class="fas fa-bookmark"></i>
+            <span>Bookmarks</span>
+        </a>
+        <a href="settings.html" class="user-menu-item">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </a>
+        <div class="user-menu-divider"></div>
+        <a href="#" class="user-menu-item logout-btn danger">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Scripts -->
+    <script src="../js/avatar-generator.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>

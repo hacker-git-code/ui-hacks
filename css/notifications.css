@@ -1,0 +1,349 @@
+/* Notifications Page Styles */
+
+/* Notification Tabs */
+.notification-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    position: sticky;
+    top: 60px;
+    z-index: 10;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.notification-tabs::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.tab-btn {
+    padding: 15px 20px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px 3px 0 0;
+}
+
+/* Notifications List */
+.notifications-list {
+    padding: 0;
+}
+
+.notification-section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 15px 20px 10px;
+    margin: 0;
+    background-color: var(--bg-primary);
+    position: sticky;
+    top: 110px;
+    z-index: 5;
+}
+
+.notification-item {
+    display: flex;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+    background-color: var(--bg-hover);
+}
+
+.notification-item.unread {
+    background-color: rgba(14, 165, 233, 0.05);
+}
+
+.notification-avatar {
+    margin-right: 15px;
+    position: relative;
+}
+
+.avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notification-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.multiple-avatars {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.avatar-small.stacked {
+    position: absolute;
+    border: 2px solid var(--bg-primary);
+}
+
+.avatar-small.stacked:nth-child(1) {
+    z-index: 3;
+    left: 0;
+    top: 0;
+}
+
+.avatar-small.stacked:nth-child(2) {
+    z-index: 2;
+    left: 10px;
+    top: 10px;
+}
+
+.avatar-count {
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 10px;
+    z-index: 4;
+}
+
+.notification-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.notification-content p {
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--text-primary);
+}
+
+.notification-time {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.notification-actions {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    gap: 10px;
+}
+
+.notification-action {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 5px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.notification-action:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.notification-item.unread .notification-action i {
+    color: var(--primary-color);
+}
+
+.follow-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.follow-btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.follow-btn.following {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Mark Read Button */
+.mark-read-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.mark-read-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+/* Activity Summary */
+.activity-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+}
+
+.activity-stat {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.activity-stat:hover {
+    transform: translateY(-2px);
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.stat-icon.likes {
+    background-color: #f43f5e;
+}
+
+.stat-icon.comments {
+    background-color: #3b82f6;
+}
+
+.stat-icon.mentions {
+    background-color: #10b981;
+}
+
+.stat-icon.followers {
+    background-color: #8b5cf6;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-count {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Recent Activity */
+.recent-activity {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.activity-item:hover {
+    transform: translateY(-2px);
+}
+
+.activity-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: white;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-content p {
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.activity-time {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .activity-summary {
+        grid-template-columns: 1fr;
+    }
+    
+    .notification-actions {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
